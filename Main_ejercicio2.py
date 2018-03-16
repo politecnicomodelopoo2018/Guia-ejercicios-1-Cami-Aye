@@ -9,7 +9,7 @@ unAlumno = Alumno()
 #unAlumno.AgregarNotaMateria(nombre, Nota)
 
 #nombre_materia = input("Ingrese el nombre de la nueva materia")
-#unAlumno.AgregarMateria(nombre)
+#unAlumno.AgregarMateria(nombreffff)
 
 for loop in range(10):
     nombre_materia = input("Ingrese nombre de la materia o basta para no agregar mas: ")

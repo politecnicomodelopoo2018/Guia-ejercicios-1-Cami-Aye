@@ -1,9 +1,11 @@
+from Class_materia import Materia
+
 class Alumno (object):
     nombre = None
     apellido = None
     fecha_nacimiento = None
     def __init__  (self):
-        self.listaNotas = []
+        self.listaMateria = []
 
 
     def setNombre(self, nombre):
@@ -16,30 +18,23 @@ class Alumno (object):
 
         self.fecha_nacimiento = fecha_nacimiento
 
-    def setNotas (self, nota):
-        if nota>10:
-            return False
-        if nota<1:
-            return False
+    def AgregarMateria (self, nombre):
+        materia = Materia(nombre)
+        self.listaMateria.append(materia)
 
-        self.listaNotas.append(nota)
-        return True
+    def AgregarNotaMateria (self, nombre, nota):
+
+        for buscador in self.listaMateria:
+
+            if buscador.nombre_materia == nombre:
+                buscador.setNotas(nota)
+                return True
 
 
-    def mayor (self):
-        return max(self.listaNotas)
 
-    def menor (self):
-        return min(self.listaNotas)
 
-    def promedio(self):
-        if len(self.listaNotas) == 0:
-            return False
-        posicion = 0
-        suma = sum(self.listaNotas)
-        for cosito in self.listaNotas:
-            posicion+=1
-        return suma/posicion
+
+
 
 
 

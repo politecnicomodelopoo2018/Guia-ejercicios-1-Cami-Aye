@@ -1,5 +1,4 @@
 
-
 class Materia(object):
 
     nombre_materia = None

@@ -6,7 +6,7 @@ class Empresa(object):
         listaEmpleados = []
 
 
-    def SetEmpleado (self, nombre):
+    def AgregarEmpleado (self, nombre):
 
         unEmpleado = Empleado(nombre)
         self.listaEmpleados.append(unEmpleado)

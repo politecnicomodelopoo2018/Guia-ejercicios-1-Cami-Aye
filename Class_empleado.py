@@ -1,4 +1,5 @@
 import datetime
+import calendar
 class Empleado(object):
     nombre = None
     apellido = None
@@ -31,18 +32,21 @@ class Empleado(object):
         SumDiasAsis = 0
         for dia in self.DiasAsistidos:
             diasemana = dia.weekday()
-            print(diasemana)
             if self.DiasQueAsistir[diasemana] == True:
                 SumDiasAsis+=1
 
         return SumDiasAsis
 
-    def NumDiasSemana (self):
+    def NumDiasSemana (self, mes, año):
         SumDias = 0
-        for dia in self.DiasQueAsistir:
+        calendario = calendar.monthrange(año, mes)
+        numdia = 1
+        for i in range(1, calendario[1]+1):
+            if numdia == 1:
+                for dia in self.DiasQueAsistir:
             if dia == True:
                 SumDias += 1
-        return SumDias*4
+        return SumDias
 
     def PromedioDias (self, SumDias, SumDiasAsis):
         promedio = float((SumDiasAsis*100)/SumDias)

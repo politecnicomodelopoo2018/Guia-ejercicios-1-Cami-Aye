@@ -8,8 +8,11 @@ unEmpleado = Empleado()
 unEmpleado.nombre = input("Ingrese el nombre ")
 unEmpleado.apellido = input("Ingrese el apellido ")
 unEmpleado.telefono = input("Ingrese telefono ")
-unEmpleado.fecha_nac = datetime.date(2000,11,29)
-
+dia_nac = int(input("Ingrese dia de su nacimiento: "))
+mes_nac = int(input("Ingrese mes de su nacimiento: "))
+año_nac = int(input("Ingrese año de su nacimiento: "))
+fecha_nac = datetime.date(año_nac, mes_nac, dia_nac)
+unEmpleado.setFecha_nacimiento(fecha_nac)
 
 
 while (1):
@@ -23,7 +26,9 @@ while (1):
     if cortar_while == "no":
         break
 
-SumDias = unEmpleado.NumDiasSemana()
+mes = int(input("De que mes quiere sacar el promedio?"))
+año = int(input("De que año quiere sacar el promedio?"))
+SumDias = unEmpleado.NumDiasSemana(mes, año)
 SumDiasAsis = unEmpleado.NumDiasAsisitidos()
 promedio = unEmpleado.PromedioDias(SumDias, SumDiasAsis)
 print(promedio)

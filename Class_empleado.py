@@ -50,7 +50,7 @@ class Empleado(object):
 
     def PromedioDias (self, SumDias, SumDiasAsis):
         promedio = float((SumDiasAsis*100)/SumDias)
-        return promedio
+        return  promedio
 
 
 

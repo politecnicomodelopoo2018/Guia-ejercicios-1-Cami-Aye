@@ -6,6 +6,7 @@ class Empleado(object):
     fecha_nac = None
 
     def __init__  (self):
+        self.Mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
         self.DiasQueAsistir = [True, False, True, True, False, False, True]
         self.DiasAsistidos = []
 
@@ -23,13 +24,29 @@ class Empleado(object):
 
         self.telefono = telefono
 
-    def DiasAsistidoss (self, año, mes, dia):
-        fecha = datetime.date (año, mes, dia)
-        self.DiasAsistidos(fecha)
+    def DiasAsistidoss (self, fecha):
+        self.DiasAsistidos.append(fecha)
 
     def NumDiasAsisitidos (self):
-        self.DiasAsistidos
+        SumDiasAsis = 0
+        for dia in self.DiasAsistidos:
+            diasemana = dia.weekday()
+            print(diasemana)
+            if self.DiasQueAsistir[diasemana] == True:
+                SumDiasAsis+=1
 
+        return SumDiasAsis
+
+    def NumDiasSemana (self):
+        SumDias = 0
+        for dia in self.DiasQueAsistir:
+            if dia == True:
+                SumDias += 1
+        return SumDias*4
+
+    def PromedioDias (self, SumDias, SumDiasAsis):
+        promedio = float((SumDiasAsis*100)/SumDias)
+        return promedio
 
 
 

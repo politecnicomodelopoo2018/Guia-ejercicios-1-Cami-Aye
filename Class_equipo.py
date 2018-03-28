@@ -2,6 +2,7 @@ class Equipo(object):
     nombre = None
     barrio = None
     capitan = None
+    emparejado = None
     def __init__(self):
 
         DisponibilidadHoraria = []
@@ -19,4 +20,7 @@ class Equipo(object):
     def AgregarJugadores (self, jugador):
         self.Jugadores.append = jugador
 
-    def DecidirHorario (self)
+    def DecidirHorario (self, horario):
+        self.DisponibilidadHoraria.append = horario
+
+

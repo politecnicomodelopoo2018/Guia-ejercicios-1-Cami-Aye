@@ -4,9 +4,8 @@ class Equipo(object):
     capitan = None
     emparejado = None
     def __init__(self):
-
-        DisponibilidadHoraria = []
-        Jugadores = []
+        self.DisponibilidadHoraria = []
+        self.Jugadores = []
 
     def NombrarEquipo (self, nombre):
         self.nombre = nombre

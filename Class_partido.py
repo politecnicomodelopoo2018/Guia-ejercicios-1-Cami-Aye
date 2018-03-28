@@ -1,9 +1,24 @@
+from Class_equipo import Equipo
 class partido(object):
     dia = None
     horario = None
 
     def __init__(self):
+        self.equipos = []
+        self.emparejamientos = []
 
-        equipos = []
+    def AgregarEquipo(self, equipo):
+        self.equipos.append = equipo
 
-    def Emparejar(self, horario, equipo):
+
+    def FichaHorario(self):
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,4 @@
+from Clase_canciones import Canciones
 class Discografica(object):
     nombre = None
 
@@ -15,9 +16,8 @@ class Discografica(object):
         listaCancionesPais = []
         for item in self.albumes:
             for item2 in item.canciones:
-                if item2.nacionalidad == pais:
-                    listaCancionesPais.append(item2)
+                for item3 in item2.autores:
+                    if item3.nacionalidad == pais:
+                        listaCancionesPais.append(item2)
 
         return listaCancionesPais
-
-

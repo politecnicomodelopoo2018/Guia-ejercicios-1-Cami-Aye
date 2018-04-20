@@ -29,3 +29,9 @@ class Album(object):
         return artista_mas_influyente
 
 
+    def ArtistasParticipantes(self):
+        participantes = []
+        for item in self.canciones:
+            for item2 in item.artistas:
+                participantes.append(item2)
+        return participantes

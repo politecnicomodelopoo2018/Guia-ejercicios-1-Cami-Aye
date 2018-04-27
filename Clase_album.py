@@ -10,11 +10,13 @@ class Album(object):
     def AgregarCanciones(self, cancion):
         self.canciones.append(cancion)
 
+    # Artista mas influyente del album
     def MasInfluyente(self):
         artista_mas_influyente = None
         artista_normal = None
         contador_canciones_aparicion = None
-        contador_top_aparicion = None
+        contador
+        _top_aparicion = None
         for item in self.canciones:
             for item2 in item.artistas:
                 artista_normal = item2
@@ -28,10 +30,11 @@ class Album(object):
                     contador_canciones_aparicion = 0
         return artista_mas_influyente
 
-
+    # Listado artistas que participaron en un album
     def ArtistasParticipantes(self):
         participantes = []
         for item in self.canciones:
             for item2 in item.artistas:
-                participantes.append(item2)
+                if item2 not in participantes:
+                    participantes.append(item2)
         return participantes

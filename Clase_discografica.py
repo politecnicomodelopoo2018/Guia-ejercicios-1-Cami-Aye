@@ -12,6 +12,8 @@ class Discografica(object):
     def AgregarAlbum(self, album):
         self.albumes.append(album)
 
+# Listado completo de canciones escritas por autores de una nacionalidad ingresada.
+
     def ListaCancionesPais(self, pais):
         listaCancionesPais = []
         for item in self.albumes:

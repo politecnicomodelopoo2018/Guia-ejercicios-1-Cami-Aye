@@ -1,7 +1,5 @@
 from Clase_Clientes import Clientes
 
-
-
 class Alumnos(Clientes):
     division= None
 

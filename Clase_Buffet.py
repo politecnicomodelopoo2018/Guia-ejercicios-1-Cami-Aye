@@ -45,3 +45,32 @@ class Buffet(object):
             if item == pedido_eliminado:
                 self.pedidos.remove(item)
                 break
+
+    #MODIFICAR
+    def ModificarAlumno(self, alumno, nombre, apellido, division):
+
+        for item_alumno in self.clientes:
+
+            if item_alumno ==
+                if nombre != None:
+
+
+        for item in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

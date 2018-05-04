@@ -1,12 +1,13 @@
 from Clase_Alumnos import Alumnos
 from Clase_Clientes import Clientes
-
+from Clase_Platos import Platos
 
 class Buffet(object):
     def __init__(self):
         self.clientes = []
         self.platos = []
         self.pedidos = []
+
     #MENUS
 
     def MenuPrincipal(self):
@@ -127,7 +128,7 @@ class Buffet(object):
 
     def ListadoPlatos(self, profesor):
         lista_platos = []
-        unplato = Plato()
+        unplato = Platos()
         for item_plato in self.platos:
             unplato.precio = item_plato.precio
             unplato.nombre = item_plato.nombre
@@ -142,6 +143,33 @@ class Buffet(object):
     def SacarPrecioDescuento(self, precio, descuento):
         preciodesc = precio-(precio*descuento)/100
         return preciodesc
+
+    #VERIFICAR:
+
+    def BuscarPlato(self, nombre, modificar):
+        for item in self.platos:
+            if nombre == item:
+                if modificar == True:
+                    return item
+                return True
+        return False
+
+    def BuscarCliente(self, nombre, apellido, modificar):
+        for item in self.clientes:
+            if nombre == item.nombre and apellido == item.apellido:
+                if modificar == True:
+                    return item
+                return True
+        return False
+
+    def BuscarPedido(self, pedido, modificar):
+        for item in self.pedidos:
+            if pedido == item:
+                if modificar == True:
+                    return item
+                return True
+        return False
+
 
 
 

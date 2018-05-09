@@ -162,25 +162,11 @@ class Buffet(object):
                 return True
         return False
 
-    def BuscarPedido(self, pedido, modificar):
+    def BuscarPedido(self, persona, plato, modificar):
         for item in self.pedidos:
-            if pedido == item:
+            if persona == item.persona_que_pidio and plato == item.plato:
                 if modificar == True:
                     return item
                 return True
         return False
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

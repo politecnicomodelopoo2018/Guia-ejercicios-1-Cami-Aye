@@ -5,6 +5,7 @@ class Persona(object):
     fecha_ingreso = None
     tipo = None
 
+
     def SetNombre(self, nombre):
         self.nombre = nombre
     def SetApellido(self, apellido):
@@ -13,10 +14,7 @@ class Persona(object):
         self.DNI = DNI
     def SetFechaIngreso(self, fecha_ing):
         self.fecha_ingreso = fecha_ing
-    def AgregaraArchivoPersonas(self, persona):
-        datos = self.BuscarEnArchivo(persona.nombre, persona.apellido)
-        if datos == True:
-            archivo_personas = open('Archivo_Personas.txt', 'w')
-            archivo_personas.write(persona.tipo + "/" + persona.nombre + "/" + persona.apellido + "/" + persona.DNI + "/" + persona.fecha_ingreso + "\n")
-            archivo_personas.close()
-        return False
+
+    def Codificacion(self):
+        return self.tipo + "|" + self.nombre + "|" + self.apellido + "|" + self.DNI + "|" + self.fecha_ingreso + '\n'
+

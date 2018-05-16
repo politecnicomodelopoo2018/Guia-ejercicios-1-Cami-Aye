@@ -7,8 +7,10 @@ class CategoriaMusica(Programa):
 
     def SetMusicalizador(self, persona):
         self.musicalizador = persona
+
     def AgregarEstiloMusica(self, estilo):
         for item in self.estilosMusica:
             if item == estilo:
                 return False
         self.estilosMusica.append(estilo)
+

@@ -1,4 +1,4 @@
-from Clase_artistas import Artista
+from Ejercicio5.Clase_artistas import Artista
 
 class Autores (Artista):
 

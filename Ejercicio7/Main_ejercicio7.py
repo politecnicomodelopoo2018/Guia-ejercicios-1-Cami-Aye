@@ -1,7 +1,7 @@
 from Clase_Buffet import Buffet
 from Clase_Clientes import Clientes
-from Clase_Pedidos import Pedidos
-from Clase_Platos import Platos
+from Ejercicio7.Clase_Pedidos import Pedidos
+from Ejercicio7.Clase_Platos import Platos
 import datetime
 
 opcion = None

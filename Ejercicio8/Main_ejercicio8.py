@@ -1,5 +1,5 @@
 from Clase_Programas import Programa
-from Clase_Persona import Persona
+from Ejercicio_Partido.Clase_Persona import Persona
 from Clase_Radio import Radio
 
 lista_archivo = []

@@ -1,4 +1,4 @@
-from Clase_Programas import Programa
+from Ejercicio8.Clase_Programas import Programa
 class CategoriaMusica(Programa):
     musicalizador = None
     def __init__(self):

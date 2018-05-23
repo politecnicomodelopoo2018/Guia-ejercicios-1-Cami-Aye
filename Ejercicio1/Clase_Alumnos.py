@@ -1,4 +1,4 @@
-from Clase_Clientes import Clientes
+from Ejercicio7.Clase_Clientes import Clientes
 
 class Alumnos(Clientes):
     division= None

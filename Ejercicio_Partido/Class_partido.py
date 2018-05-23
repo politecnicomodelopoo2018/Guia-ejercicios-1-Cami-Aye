@@ -1,4 +1,3 @@
-from Class_equipo import Equipo
 class partido(object):
     dia = None
     horario = None

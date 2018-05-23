@@ -2,7 +2,7 @@ from Clase_canciones import Canciones
 from Clase_artistas import Artista
 from Clase_discografica import Discografica
 from Clase_autores import Autores
-from Clase_album import Album
+from Ejercicio5.Clase_album import Album
 
 
 

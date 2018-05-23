@@ -1,6 +1,4 @@
-from Clase_Alumnos import Alumnos
-from Clase_Clientes import Clientes
-from Clase_Platos import Platos
+from Ejercicio7.Clase_Platos import Platos
 
 class Buffet(object):
     def __init__(self):

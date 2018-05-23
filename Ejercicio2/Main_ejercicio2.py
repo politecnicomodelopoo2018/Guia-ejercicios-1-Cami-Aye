@@ -1,4 +1,4 @@
-from Class_alumno import Alumno
+from Ejercicio1.Class_alumno import Alumno
 
 unAlumno = Alumno()
 

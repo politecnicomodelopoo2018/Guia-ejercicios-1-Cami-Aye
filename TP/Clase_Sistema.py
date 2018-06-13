@@ -8,9 +8,10 @@ class Sistema(object):
         return Sistema.__instancia
     def __init__(self):
         self.personas = []
-        self.aviones =  []
+        self.aviones = []
         self.vuelos = []
-#Buscar
+    #Buscar
+
     def BuscarAvion(self, codigo_avion):
         for item in self.aviones:
             if codigo_avion == item.codigo:
@@ -28,3 +29,15 @@ class Sistema(object):
     def StringToDate(self, fecha):
         fecha_date = datetime.strptime(fecha, '%dd/%mm/%Y')
         return fecha_date
+
+    #Agregar en lista
+
+    def AgregarPersona(self, persona):
+        self.personas.append(persona)
+
+    def AgregarVuelo(self, vuelo):
+        self.vuelos.append(vuelo)
+
+    def AgregarAvion(self, avion):
+        self.aviones.append(avion)
+

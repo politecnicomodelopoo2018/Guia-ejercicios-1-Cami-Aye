@@ -9,7 +9,7 @@ class Vuelo(object):
         self.tripulantes = []
         self.pasajeros = []
 
-#Deserealizacion:
+#Deserializacion:
 
     def deserializarCodigoAvion(self, vuelo):
         codigo_vuelo = vuelo["avion"]

@@ -3,7 +3,7 @@ class Avion(object):
     cantidad_pasajeros_maximo = None
     cantidad_tripulantes_necesaria = None
 
-#Deserealizacion
+#Deserializacion
 
     def AsignarAvion(self, avion):
         self.codigo = avion["codigoUnico"]

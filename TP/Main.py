@@ -79,3 +79,12 @@ for item in sistema.vuelos:
 
 
 archivo.close()
+
+
+#Ejercicio 5
+tripulante = input("Ingrese tripulante")
+confirmacion = sistema.Verificar_Vuelos_Por_Fecha(tripulante)
+if confirmacion == True:
+    print("Viajo mas de una vez un mismo dia")
+else:
+    print("No viajo mas de una vez un mismo dia")

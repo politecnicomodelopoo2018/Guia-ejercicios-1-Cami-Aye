@@ -63,7 +63,6 @@ class Sistema(object):
         dias = None
         for item in lista_fechas:
             dias = 0
-            print(lista_fechas)
             for item2 in lista_fechas:
                 if item == item2:
                     dias += 1

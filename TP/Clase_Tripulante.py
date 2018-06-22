@@ -17,15 +17,5 @@ class Tripulante(Persona):
 
 
 
-class Servicio(Tripulante):
-    def __init__(self):
-        self.idiomas = []
-
-    def deserializarservicio(self, persona):
-        Tripulante().deserializarTripulante(persona)
-        for item in persona["idiomas"]:
-            self.idiomas.append(item)
-
-
 class Piloto(Tripulante):
     pass

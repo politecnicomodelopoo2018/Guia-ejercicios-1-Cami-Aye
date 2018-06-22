@@ -7,7 +7,5 @@ class Avion(object):
 
     def AsignarAvion(self, avion):
         self.codigo = avion["codigoUnico"]
-        self.cantidad_pasajeros_maximo = avion["cantidadDePasajerosMaxima"]
         self.cantidad_tripulantes_necesaria = avion["cantidadDeTripulaciónNecesaria"]
-
-
+        self.cantidad_pasajeros_maximo = avion["cantidadDePasajerosMaxima"]

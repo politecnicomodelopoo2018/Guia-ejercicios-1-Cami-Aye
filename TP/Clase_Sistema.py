@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 class Sistema(object):
     __instancia = None
     def __new__(cls):
@@ -15,11 +15,14 @@ class Sistema(object):
     def BuscarAvion(self, codigo_avion):
         for item in self.aviones:
             if codigo_avion == item.codigo:
-                return item
+                allgo = item
+
+                return allgo
     def BuscarPasajero(self, codigo_pasajero):
         for item in self.personas:
             if item.DNI == codigo_pasajero:
                 return item
+
 
     def BuscarTripulante(self, codigo_tripulante):
         for item in self.personas:
@@ -27,7 +30,7 @@ class Sistema(object):
                 return item
 
     def StringToDate(self, fecha):
-        fecha_date = datetime.strptime(fecha, '%dd/%mm/%Y')
+        fecha_date = datetime.strptime(fecha, '%Y-%m-%d')
         return fecha_date
 
     #Agregar en lista
@@ -40,4 +43,3 @@ class Sistema(object):
 
     def AgregarAvion(self, avion):
         self.aviones.append(avion)
-

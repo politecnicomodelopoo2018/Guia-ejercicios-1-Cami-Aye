@@ -89,9 +89,9 @@ class Sistema(object):
         Lista_vuelosNoHabilitados = []
         for vuelo in self.vuelos:
             for tripulacion in vuelo.tripulantes:
-                if vuelo.avion not in tripulacion.aviones_habilitados:
-                    if vuelo not in Lista_vuelosNoHabilitados:
-                        Lista_vuelosNoHabilitados.append(vuelo)
+                   if vuelo.avion not in tripulacion.aviones_habilitados:
+                        if vuelo not in Lista_vuelosNoHabilitados:
+                            Lista_vuelosNoHabilitados.append(vuelo)
         return Lista_vuelosNoHabilitados
 
 

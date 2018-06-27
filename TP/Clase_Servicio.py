@@ -21,7 +21,8 @@ class Servicio(Persona):
             # Esto es un metodo en sistema llamado Buscar avion pero no me returnea nada aunque entre en el if
             for item2 in sistema.aviones:
                 if item == item2.codigo:
-                    avionnnn = item
-                    self.aviones_habilitados.append(avionnnn)
+                    avion = item
+                    avion = sistema.BuscarAvion(avion)
+                    self.aviones_habilitados.append(avion)
         for item in persona["idiomas"]:
             self.idiomas.append(item)

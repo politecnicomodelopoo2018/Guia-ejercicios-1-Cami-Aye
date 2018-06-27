@@ -19,10 +19,10 @@ for item in d["Aviones"]:
     avioncito = Avion()
     avioncito.AsignarAvion(item)
     sistema.AgregarAvion(avioncito)
-
+'''
 for item in sistema.aviones:
     print("avion: ", item.codigo, " cantidad maxima de pasajeros: ", item.cantidad_pasajeros_maximo, " cantidad necesaria de tripulantes: ", item.cantidad_tripulantes_necesaria)
-
+'''
 
 
 # Personas json
@@ -41,7 +41,7 @@ for item in d["Personas"]:
         personita = Servicio()
         personita.deserializarservicio(item)
         sistema.AgregarPersona(personita)
-
+'''
 for item in sistema.personas:
     if item.tipo == 'Pasajero':
             print("Nombre: ", item.nombre, "Apellido: ", item.apellido, "Fecha de nacimiento: ", item.fecha_nac, "DNI: ", item.DNI, "VIP: ", item.vip, "Solicitudes Especiales: ", item.solicitudes_especiales)
@@ -58,7 +58,7 @@ for item in sistema.personas:
                 print(avion_habilitado)
             for idioma in item.idiomas:
                 print(idioma)
-
+'''
 
 
 # Vuelos json
@@ -67,7 +67,7 @@ for item in d["Vuelos"]:
     vuelito = Vuelo()
     vuelito.AsignarVuelo(item)
     sistema.AgregarVuelo(vuelito)
-
+'''
 for item in sistema.vuelos:
     print("avion: ", item.avion.codigo, " fecha: ", item.fecha, " hora: ", item.hora, " origen: ", item.origen, " destino: ", item.destino)
     print(" tripulantes: ")
@@ -76,7 +76,7 @@ for item in sistema.vuelos:
     print(" pasajeros: ")
     for item2 in item.pasajeros:
         print(item2.DNI)
-
+'''
 archivo.close()
 
 
@@ -90,6 +90,7 @@ if vuelo != None:
     print(nomina)
 else:
     print("El vuelo no existe")
+
 '''
 
 #Ejercicio 2
@@ -111,11 +112,11 @@ for item in Lista_vuelos:
     print(item.destino)'''
 
 #Ejercicio 4
-'''
+
 Lista_vuelos = sistema.VuelosTripuladosSinAutorizacion()
 for item in Lista_vuelos:
     print(item.destino)
-'''
+
 
 #Ejercicio 5
 '''

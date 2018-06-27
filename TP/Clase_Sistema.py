@@ -29,6 +29,11 @@ class Sistema(object):
             if item.DNI == codigo_tripulante:
                 return item
 
+    def BuscarVuelo(self, destino):
+        for item in self.vuelos:
+            if item.destino == destino:
+                return item
+
     def StringToDate(self, fecha):
         fecha_date = datetime.strptime(fecha, '%Y-%m-%d')
         return fecha_date
@@ -70,5 +75,24 @@ class Sistema(object):
                         return True
         return False
 
-#uy
+# Ejercicio 3
+    def TripulacionMinimaNoAlcanzada(self):
+        ListaVuelosTripulacionNoAlcanzada = []
+        for vuelos in self.vuelos:
+            contador = len(vuelos.tripulantes)
+            if contador < vuelos.avion.cantidad_tripulantes_necesaria:
+                ListaVuelosTripulacionNoAlcanzada.append(vuelos)
+        return ListaVuelosTripulacionNoAlcanzada
+
+    #Ejercicio 4
+    def VuelosTripuladosSinAutorizacion(self):
+        Lista_vuelosNoHabilitados = []
+        for vuelo in self.vuelos:
+            for tripulacion in vuelo.tripulantes:
+                if vuelo.avion not in tripulacion.aviones_habilitados:
+                    if vuelo not in Lista_vuelosNoHabilitados:
+                        Lista_vuelosNoHabilitados.append(vuelo)
+        return Lista_vuelosNoHabilitados
+
+
 

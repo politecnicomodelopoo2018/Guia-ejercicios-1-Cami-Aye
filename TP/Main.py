@@ -7,9 +7,12 @@ from Clase_Vuelos import Vuelo
 from Clase_Servicio import Servicio
 
 archivo = open("datos.json", "r")
+
 d = json.loads(archivo.read())
 
 sistema = Sistema()
+
+
 # Aviones json
 
 for item in d["Aviones"]:
@@ -23,7 +26,6 @@ for item in sistema.aviones:
 
 
 # Personas json
-
 
 for item in d["Personas"]:
     if item["tipo"] == "Pasajero":
@@ -75,16 +77,77 @@ for item in sistema.vuelos:
     for item2 in item.pasajeros:
         print(item2.DNI)
 
-
-
-
 archivo.close()
 
 
+#Ejercicio 1
+
+'''
+destiny = input("Ingrese destino del vuelo: ")
+vuelo = sistema.BuscarVuelo(destiny)
+if vuelo != None:
+    nomina = vuelo.NominaPasajeros()
+    print(nomina)
+else:
+    print("El vuelo no existe")
+'''
+
+#Ejercicio 2
+
+'''
+destiny = input("Ingrese destino del vuelo: ")
+vuelo = sistema.BuscarVuelo(destiny)
+if vuelo != None:
+    Pasajero_joven = vuelo.PasajeroMasJoven()
+    print(Pasajero_joven, Pasajero_joven.nombre)
+else:
+    print("El vuelo no existe")
+'''
+
+#Ejercicio 3
+'''
+Lista_vuelos = sistema.TripulacionMinimaNoAlcanzada()
+for item in Lista_vuelos:
+    print(item.destino)'''
+
+#Ejercicio 4
+'''
+Lista_vuelos = sistema.VuelosTripuladosSinAutorizacion()
+for item in Lista_vuelos:
+    print(item.destino)
+'''
+
 #Ejercicio 5
-tripulante = input("Ingrese tripulante")
+'''
+tripulante = input("Ingrese tripulante: ")
 confirmacion = sistema.Verificar_Vuelos_Por_Fecha(tripulante)
 if confirmacion == True:
     print("Viajo mas de una vez un mismo dia")
 else:
     print("No viajo mas de una vez un mismo dia")
+'''
+
+#Ejercicio 6
+'''
+destiny = input("Ingrese destino del vuelo: ")
+vuelo = sistema.BuscarVuelo(destiny)
+lista_pasajerosConNecesidadesOVp = []
+if vuelo != None:
+    lista_pasajerosConNecesidadesOVp = vuelo.PasajerosVipONecesidad()
+else:
+    print("El vuelo no existe")
+for item in lista_pasajerosConNecesidadesOVp:
+     print(item.nombre)
+'''
+
+#Ejercicio 7
+'''
+destiny = input("Ingrese destino del vuelo: ")
+vuelo = sistema.BuscarVuelo(destiny)
+lista_idiomas = []
+if vuelo != None:
+    lista_idiomas = vuelo.IdiomasEnCadaVuelo()
+    print(lista_idiomas)
+else:
+    print("El vuelo no existe")
+'''

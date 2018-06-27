@@ -43,3 +43,41 @@ class Vuelo(object):
         self.fecha = sistema.StringToDate(vuelo["fecha"])
 
 
+    #Ejercicio 1
+    def NominaPasajeros(self):
+        return self.pasajeros
+
+    #Ejercicio 2
+    def PasajeroMasJoven(self):
+        pasajero_mas_joven = None
+        pasajero_joven = None
+        contador = 0
+        for pasajero in self.pasajeros:
+            if contador == 0:
+                pasajero_mas_joven = pasajero.fecha_nac
+                pasajero_joven = pasajero
+            elif contador > 0:
+                if pasajero_mas_joven > pasajero.fecha_nac:
+                    pasajero_mas_joven = pasajero.fecha_nac
+                    pasajero_joven = pasajero
+        return pasajero
+
+    #Ejercicio 6
+    def PasajerosVipONecesidad(self):
+        ListaPasajeros = []
+        for pasajeros in self.pasajeros:
+            if pasajeros.vip == 1:
+                ListaPasajeros.append(pasajeros)
+            else:
+                if pasajeros.solicitudes_especiales != None:
+                    ListaPasajeros.append(pasajeros)
+        return ListaPasajeros
+    #Ejercicio 7
+    def IdiomasEnCadaVuelo (self):
+        lista_idiomas = []
+        for tripulacion in self.tripulantes:
+            if tripulacion.tipo == "Servicio":
+                for idioma in tripulacion.idiomas:
+                    if idioma not in lista_idiomas:
+                        lista_idiomas.append(idioma)
+        return lista_idiomas

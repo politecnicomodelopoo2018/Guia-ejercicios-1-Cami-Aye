@@ -56,24 +56,25 @@ class Sistema(object):
         for item in self.vuelos:
             for item2 in item.tripulantes:
                 if tripulante == item2.DNI:
-                    print(item.fecha)
                     lista_fechas.append(item.fecha)
-        print(lista_fechas)
         return lista_fechas
 
 
-    def Verificar_Vuelos_Por_Fecha(self, tripulante):
-        lista_fechas = self.Fechas_Por_Tripulante(tripulante)
-        fecha_anterior = None
-        dias = None
-        for item in lista_fechas:
-            dias = 0
-            for item2 in lista_fechas:
-                if item == item2:
-                    dias += 1
-                    if dias > 1:
-                        return True
-        return False
+    def Verificar_Mas_De_1_Viaje(self):
+        listaTripulantes = []
+        for tripulante in self.personas:
+            if tripulante.tipo == "Servicio" or tripulante.tipo == "Piloto":
+                lista_fechas = self.Fechas_Por_Tripulante(tripulante.DNI)
+                dias = None
+                for item in lista_fechas:
+                    dias = 0
+                    for item2 in lista_fechas:
+                        if item == item2:
+                            dias += 1
+                            if dias > 1:
+                                if tripulante not in listaTripulantes:
+                                    listaTripulantes.append(tripulante)
+        return listaTripulantes
 
 # Ejercicio 3
     def TripulacionMinimaNoAlcanzada(self):

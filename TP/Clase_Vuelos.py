@@ -57,10 +57,11 @@ class Vuelo(object):
                 pasajero_mas_joven = pasajero.fecha_nac
                 pasajero_joven = pasajero
             elif contador > 0:
-                if pasajero_mas_joven > pasajero.fecha_nac:
+                if pasajero_mas_joven < pasajero.fecha_nac:
                     pasajero_mas_joven = pasajero.fecha_nac
                     pasajero_joven = pasajero
-        return pasajero
+            contador += 1
+        return pasajero_joven
 
     #Ejercicio 6
     def PasajerosVipONecesidad(self):
@@ -72,6 +73,7 @@ class Vuelo(object):
                 if pasajeros.solicitudes_especiales != None:
                     ListaPasajeros.append(pasajeros)
         return ListaPasajeros
+
     #Ejercicio 7
     def IdiomasEnCadaVuelo (self):
         lista_idiomas = []
